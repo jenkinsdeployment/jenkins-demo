@@ -36,7 +36,7 @@
 						<username>PSW1</username>
 						<password>Pr@jw@l16</password>
 						<environment>Sandbox</environment>
-						<applicationName>jenkins-demo</applicationName>
+						<applicationName>jenkinsappDemo</applicationName>
 						<workerType>Micro</workerType>
 						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
