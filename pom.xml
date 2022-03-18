@@ -32,13 +32,13 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>4.4.0-20211227</muleVersion>
-						<username>PSW1</username>
-						<password>Pr@jw@l16</password>
-						<environment>Sandbox</environment>
-						<applicationName>jenkinsappDemo</applicationName>
-						<workerType>Micro</workerType>
-						<workers>1</workers>
+						<muleVersion>${mule.version}</muleVersion>
+						<username>${anypoint.username}</username>
+						<password>${anypoint.password}</password>
+						<environment>${env}</environment>
+						<applicationName>${appname}</applicationName>
+						<workerType>${vCore}</workerType>
+						<workers>${workers}</workers>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 				</configuration>
