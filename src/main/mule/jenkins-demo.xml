@@ -11,6 +11,6 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="aaaFlow" doc:id="d02ec0d8-bd4e-40f0-86c8-df7582154696" >
 		<http:listener doc:name="Listener" doc:id="eb0144d5-de4c-491b-b108-c103d0e0ec44" config-ref="HTTP_Listener_config" path="/jenkins-demo"/>
-		<logger level="INFO" doc:name="Logger" doc:id="da924264-3ad2-4259-aaa9-1ba704ffb980" message='#["Deployment Successful."]'/>
+		<logger level="INFO" doc:name="Logger" doc:id="da924264-3ad2-4259-aaa9-1ba704ffb980" message='#["Deployment Successful"]'/>
 	</flow>
 </mule>
