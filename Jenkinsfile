@@ -16,9 +16,7 @@ pipeline
 	 
 	stage('Deploy Application'){
 	steps{
-	bat 'mvn deploy -DmuleDeploy -DskipTests -Dmule.version=4.4.0 -Danypoint.username=PSW1 
-	-Danypoint.password=Pr@jw@l16 -Denv=Sandbox -Dappname=mule-git-jenkins-cicd-demo 
-	-DvCore=Micro -Dworkers=1'
+	bat 'mvn deploy -DmuleDeploy -DskipTests -Dmule.version=4.4.0 -Danypoint.username=PSW1 -Danypoint.password=Pr@jw@l16 -Denv=Sandbox -Dappname=jenkins-demo-pipeline -DvCore=Micro -Dworkers=1'
 	 }
 	 }
   }
