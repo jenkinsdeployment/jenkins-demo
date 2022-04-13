@@ -39,7 +39,7 @@
 						<applicationName>${appname}</applicationName>
 						<workerType>${vCore}</workerType>
 						<workers>${workers}</workers>
-						<businessGroupId>>${business.groupId}</businessGroupId>
+						<businessGroupId>c6213b89-7332-45cb-9584-c93bde0b7702</businessGroupId>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 				</configuration>
