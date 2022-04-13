@@ -10,13 +10,13 @@ pipeline
 	 
 	stage('Munit Test Application'){
 	steps{
-	bat 'mvn test'
+	bat 'mvn clean test'
 	}
 	}
 	 
 	stage('Deploy Application'){
 	steps{
-	bat 'mvn deploy -DmuleDeploy -DskipTests -Dmule.version=4.4.0 -Danypoint.username=Prajwal16 -Danypoint.password=Magenta2022$# -Denv=Sandbox -Dappname=jenkins-demo-pipeline-1 -DvCore=Micro -Dworkers=1 -Dbusiness.group=c6213b89-7332-45cb-9584-c93bde0b7702'
+	bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.4.0 -Danypoint.username=Prajwal16 -Danypoint.password=Magenta2022$# -Denv=Sandbox -Dappname=jenkins-demo-pipeline-1 -DvCore=Micro -Dworkers=1 -Dbusiness.group=c6213b89-7332-45cb-9584-c93bde0b7702'
 	 }
 	 }
   }
