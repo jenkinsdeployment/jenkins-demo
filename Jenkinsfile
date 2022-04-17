@@ -21,7 +21,7 @@ pipeline
 	 }
   }
    environment {
-        EMAIL_TO = 'someone@host.com'
+        EMAIL_TO = 'disguisedfox74@gmail.com'
     }
    post {
     success {
