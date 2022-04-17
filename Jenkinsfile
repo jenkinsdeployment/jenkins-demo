@@ -24,8 +24,12 @@ pipeline
    post {
     success {
         mail to: 'disguisedfox74@gmail.com',
-             subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
-             body: "Deployment Success ${env.BUILD_URL}"
+             subject: "Build success in Jenkins: $PROJECT_NAME - #$BUILD_NUMBER",
+             body: "Deployment Successful ${env.BUILD_URL}"
     }
+    failure {
+        mail to: 'disguisedfox74@gmail.com',
+             subject: "Pipeline failed: ${currentBuild.fullDisplayName}",
+             body: "Deployment failed ${env.BUILD_URL}"
 } 
 }  
