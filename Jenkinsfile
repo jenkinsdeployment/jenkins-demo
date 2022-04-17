@@ -20,18 +20,15 @@ pipeline
 	 }
 	 }
   }
-   environment {
-        EMAIL_TO = 'disguisedfox74@gmail.com'
-    }
+  
    post {
     success {
-    	to: "${EMAIL_TO}"
     	message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
+    	body: "", to: "disguisedfox74gmail.com"
     }
     failure {
-        to: "${EMAIL_TO}"
         subject: "Failed Pipeline: ${currentBuild.fullDisplayName}."
-        body: "Something is wrong with ${env.BUILD_URL}. Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}"
+        body: "Something is wrong with ${env.BUILD_URL}. Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", to: "disguisedfox74gmail.com"
     }
 }  
 }   
