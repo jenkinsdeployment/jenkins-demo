@@ -32,4 +32,5 @@ pipeline
              subject: "Pipeline failed: ${currentBuild.fullDisplayName}",
              body: "Deployment failed ${env.BUILD_URL}"
 } 
-}  
+} 
+} 
