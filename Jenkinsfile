@@ -25,7 +25,7 @@ pipeline
     }
    post {
     success {
-    	to: "${EMAIL_TO}",
+    	to: "${EMAIL_TO}"
     	message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
     }
     failure {
