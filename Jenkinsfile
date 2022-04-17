@@ -23,7 +23,7 @@ pipeline
   
    post {
     success {
-        mail to: 'disguisedfox74@gmail.com',
+        mail to: 'disguisedfox74@gmail.com;pwankhade421@gmail.com',
              subject: "Pipeline Success: ${currentBuild.fullDisplayName}",
              body: "Deployment Successful ${env.BUILD_URL}"
     }
