@@ -28,7 +28,7 @@ pipeline
              body: "Deployment Successful ${env.BUILD_URL}"
     }
     failure {
-        mail to: 'disguisedfox74@gmail.com',
+        mail to: 'disguisedfox74@gmail.com;pwankhade421@gmail.com',
              subject: "Pipeline failed: ${currentBuild.fullDisplayName}",
              body: "Deployment failed ${env.BUILD_URL}"
 } 
