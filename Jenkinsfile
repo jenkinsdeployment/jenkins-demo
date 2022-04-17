@@ -22,12 +22,10 @@ pipeline
   }
   
    post {
-   always {
-     script {
-       if (currentBuild.currentResult == 'SUCCESS') {
-         step([$class: 'Mailer', notifyEveryUnstableBuild: true, recipients: "disguisedfox74@gmail.com", sendToIndividuals: true])
+    success {
+        mail to: 'disguisedfox74@gmail.com',
+             subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Deployment Success ${env.BUILD_URL}"
     }
-  }
-}
 } 
 }  
