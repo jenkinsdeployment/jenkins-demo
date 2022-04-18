@@ -16,7 +16,7 @@ pipeline
 	 
 	stage('Deploy Application'){
 	steps{
-	bat 'mvn cle deploy -DmuleDeploy -DskipTests -Dmule.version=4.4.0 -Danypoint.username=Prajwal16 -Danypoint.password=Magenta2022$# -Denv=Sandbox -Dappname=jenkins-demo-pipeline-1 -DvCore=Micro -Dworkers=1'
+	bat 'mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.4.0 -Danypoint.username=Prajwal16 -Danypoint.password=Magenta2022$# -Denv=Sandbox -Dappname=jenkins-demo-pipeline-1 -DvCore=Micro -Dworkers=1'
 	 }
 	 }
   }
@@ -28,7 +28,7 @@ pipeline
              body: "Deployment Successful ${env.BUILD_URL}"
     }
     failure {
-        mail to: 'disguisedfox74@gmail.com', cc: 'pwankhade421@gmail.com',
+        mail to: 'disguisedfox74@gmail.com',
              subject: "Pipeline failed: ${currentBuild.fullDisplayName}",
              body: "Deployment failed ${env.BUILD_URL}"
    } 
