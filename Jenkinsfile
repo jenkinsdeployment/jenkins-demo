@@ -1,6 +1,9 @@
 pipeline
   {
    agent any
+    environment {
+            EMAIL_INFORM = 'disguisedfox74@gmail.com;pwankhade421@gmail.com'
+        }
    stages{
 	stage('Build Application'){
 	steps{
@@ -28,7 +31,7 @@ pipeline
              body: "Deployment Successful ${env.BUILD_URL}"
     }
     failure {
-        mail to: 'disguisedfox74@gmail.com;pwankhade421@gmail.com',
+        mail to: "${EMAIL_INFORM}",
              subject: "Pipeline failed: ${currentBuild.fullDisplayName}",
              body: "Deployment failed ${env.BUILD_URL}"
    } 
