@@ -1,7 +1,7 @@
 pipeline
   {
    agent any
-    environment {
+   environment {
             EMAIL_INFORM = 'disguisedfox74@gmail.com;pwankhade421@gmail.com'
         }
    stages{
@@ -31,7 +31,7 @@ pipeline
              body: "Deployment Successful ${env.BUILD_URL}"
     }
     failure {
-        mail to: "${EMAIL_INFORM}",
+         	 to: "${EMAIL_INFORM}",
              subject: "Pipeline failed: ${currentBuild.fullDisplayName}",
              body: "Deployment failed ${env.BUILD_URL}"
    } 
